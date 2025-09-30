@@ -1,1 +1,4 @@
-<p>account-list works!</p>
+@for (id of accountManager.getListOfAccountsIds(); track id) {
+    <a routerLink="details/{{id}}">{{id}}</a>
+    <br/>
+}
