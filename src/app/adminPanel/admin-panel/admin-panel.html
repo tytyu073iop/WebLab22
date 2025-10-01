@@ -1,0 +1,20 @@
+<table>
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Balance</td>
+            <td>isActivated</td>
+        </tr>
+    </thead>
+    <tbody>
+        @for (account of accountManager.getAccounts(); track account.id) {
+           <tr>
+            <td>{{account.id}}</td>
+            <td><input [id]="account.id" type="number" [(ngModel)]="account.balance"/></td>
+            <td><input [id]="account.id" type="checkbox" [(ngModel)]="account.isActive" /></td>
+           </tr> 
+        }
+    </tbody>
+</table>
+
+

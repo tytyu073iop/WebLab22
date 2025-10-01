@@ -1,5 +1,5 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
-import { Account, JustService } from '../../services/just-service';
+import { JustService } from '../../services/just-service';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 

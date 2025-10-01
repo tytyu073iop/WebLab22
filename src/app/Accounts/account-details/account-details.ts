@@ -1,6 +1,7 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Account, JustService } from '../../services/just-service';
+import { JustService } from '../../services/just-service';
+import { Account } from '../../mock-account';
 
 @Component({
   selector: 'app-account-details',
