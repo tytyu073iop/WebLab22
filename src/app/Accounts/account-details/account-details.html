@@ -1,4 +1,4 @@
-@if (currentAccount() != null) {
+@if (currentAccount != null) {
 <table>
     <thead>
         <tr>
@@ -9,9 +9,9 @@
     </thead>
     <tbody>
         <tr>
-            <td>{{currentAccount()!.id}}</td>
-            <td>{{currentAccount()!.balance}}</td>
-            <td>{{currentAccount()!.isActive}}</td>
+            <td>{{(currentAccount | async)!.id}}</td>
+            <td>{{(currentAccount | async)!.balance}}</td>
+            <td>{{(currentAccount | async)!.isActive}}</td>
         </tr>
     </tbody>
 </table>

@@ -7,11 +7,11 @@
         </tr>
     </thead>
     <tbody>
-        @for (account of accountManager.getAccounts(); track account.id) {
+        @for (account of AccountArr(); track account.id) {
            <tr>
             <td>{{account.id}}</td>
-            <td><input [id]="account.id" type="number" [(ngModel)]="account.balance"/></td>
-            <td><input [id]="account.id" type="checkbox" [(ngModel)]="account.isActive" /></td>
+            <td><input [id]="account.id" type="number" [(ngModel)]="account.balance" (ngModelChange)="handleEditBalance(account.id, $event)" /></td>
+            <td><input [id]="account.id" type="checkbox" [(ngModel)]="account.isActive" (ngModelChange)="handleEditBalance(account.id, $event)" /></td>
            </tr> 
         }
     </tbody>
