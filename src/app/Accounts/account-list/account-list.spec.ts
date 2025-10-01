@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AccountList } from './account-list';
+import { provideRouter } from '@angular/router';
 
 describe('AccountList', () => {
   let component: AccountList;
@@ -8,7 +9,8 @@ describe('AccountList', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AccountList]
+      imports: [AccountList],
+            providers: [provideRouter([{path: 'list', component: AccountList}])]
     })
     .compileComponents();
 
