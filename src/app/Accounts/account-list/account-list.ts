@@ -1,12 +1,10 @@
-import { Component, inject, OnInit, Signal, signal, WritableSignal } from '@angular/core';
+import { Component, inject, OnInit, signal, WritableSignal } from '@angular/core';
 import { JustService } from '../../services/just-service';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { ActivatedRoute } from '@angular/router';
-import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-account-list',
-  imports: [RouterLink, AsyncPipe],
+  imports: [RouterLink, RouterOutlet],
   templateUrl: './account-list.html',
   styleUrl: './account-list.css'
 })

@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { AccountList } from "../account-list/account-list";
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router'; 
 
 @Component({
   selector: 'app-account-center',
-  imports: [AccountList, RouterLink],
+  imports: [RouterLink, RouterOutlet],
   templateUrl: './account-center.html',
   styleUrl: './account-center.css'
 })
