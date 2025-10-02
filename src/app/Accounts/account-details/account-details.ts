@@ -1,6 +1,6 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { JustService } from '../../services/just-service';
+import { AccountService } from '../../services/account-service';
 import { Account } from '../../mock-account';
 import { Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
@@ -15,7 +15,7 @@ import { AsyncPipe } from '@angular/common';
 export class AccountDetails implements OnInit {
   activatedRoute = inject(ActivatedRoute);
   currentAccount? : Observable<Account> | null;
-  accountManager = inject(JustService);
+  accountManager = inject(AccountService);
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {

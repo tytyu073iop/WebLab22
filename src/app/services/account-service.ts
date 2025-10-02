@@ -5,7 +5,7 @@ import { delay, Observable, of } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class JustService {
+export class AccountService {
 
   AccountsIds = new Observable<string>((observer) => {
     const values: string[] = accountInstances.map((account) => account.id);

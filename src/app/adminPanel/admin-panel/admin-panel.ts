@@ -1,5 +1,5 @@
 import { Component, inject, OnInit, signal, WritableSignal } from '@angular/core';
-import { JustService } from '../../services/just-service';
+import { AccountService } from '../../services/account-service';
 import { AdministrationServiceService } from '../administration-service/administration-service.service';
 import {FormsModule} from '@angular/forms';
 import { debounceTime, Subject } from 'rxjs';

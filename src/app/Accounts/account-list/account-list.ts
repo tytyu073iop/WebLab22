@@ -1,5 +1,5 @@
 import { Component, inject, OnInit, signal, WritableSignal } from '@angular/core';
-import { JustService } from '../../services/just-service';
+import { AccountService } from '../../services/account-service';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
@@ -9,7 +9,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   styleUrl: './account-list.css'
 })
 export class AccountList implements OnInit {
-  accountManager = inject(JustService);
+  accountManager = inject(AccountService);
   idArr: WritableSignal<string[]> = signal([]);
 
   ngOnInit(): void {
